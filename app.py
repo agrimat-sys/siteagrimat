@@ -89,17 +89,14 @@ def dashboard():
 @app.route('/download/<nome>')
 @login_required
 def download(nome):
-    # Mapeamento de nomes válidos
     nomes_validos = {
         'relatorio2023': 'Agrimat2023 - Relatório Final.pdf',
         'relatorio2024': 'RELATÓRIO AGRIMAT.pdf',
         'apresentacao': 'apresentacao.pdf'
     }
 
-    # Verifica se o nome solicitado está no mapeamento
     if nome in nomes_validos:
         try:
-            # Verifica se o arquivo existe no diretório
             caminho_arquivo = os.path.join('documentos', nomes_validos[nome])
             if os.path.exists(caminho_arquivo):
                 return send_from_directory('documentos', nomes_validos[nome], as_attachment=True)
@@ -115,5 +112,7 @@ if __name__ == '__main__':
     # Cria a pasta de documentos, se não existir
     if not os.path.exists('documentos'):
         os.makedirs('documentos')
-    
-    app.run(host='192.168.10.84', port=5000, debug=True)
+
+    # Render define a porta com a variável de ambiente PORT
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
