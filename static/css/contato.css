@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f9fb;
+  color: #222;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.contato-hero {
+  background: linear-gradient(135deg, #551d1d, #ff0303);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contato-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.contato-hero p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.contato-main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.info-contato, .form-contato {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.info-contato h2,
+.form-contato h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.info-contato ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-contato li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.info-contato i {
+  margin-right: 10px;
+  color: #168f88;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+.btn {
+  margin-top: 20px;
+  background: #168f88;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0d403f;
+}
+
+.mapa iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+.footer {
+  background: #e9ecef;
+  text-align: center;
+  padding: 25px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+  .contato-main {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .info-contato, .form-contato {
+    flex: 1;
+    margin: 0 10px;
+  }
+}

@@ -1,0 +1,97 @@
+.estatuto-section {
+      position: relative;
+      padding: 60px 20px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .background-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.2; /* deixa a imagem suave no fundo */
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 40px;
+    }
+
+    .document-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+      margin-top: 30px;
+    }
+
+    .document-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-top: 5px solid #8B0000;
+      border-radius: 8px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .document-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .document-card i {
+      font-size: 2.5rem;
+      color: #8B0000;
+      margin-bottom: 15px;
+    }
+
+    .document-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .document-card a {
+      text-decoration: none;
+      color: #8B0000;
+      font-weight: 600;
+    }
+
+    .document-card .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #8B0000;
+      color: #fff;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .document-card .btn:hover {
+      background-color: #a80000;
+    }
+  body {
+  font-family: 'Inter', sans-serif;
+  background-image: url('/static/imagens/IMG-20250422-WA0411.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 100;
+}
